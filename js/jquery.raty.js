@@ -256,9 +256,9 @@
 			}
 		}, fixHint: function() {
 			var $this	= $(this),
-				score	= parseInt(this.score.val(), 10),
+				score	= parseInt(Math.ceil(this.score.val()), 10),
 				hint	= this.opt.noRatedMsg;
-
+			
 			if (!isNaN(score) && score > 0) {
 				hint = (score <= this.opt.hints.length && this.opt.hints[score - 1] !== null) ? this.opt.hints[score - 1] : score;
 			}
